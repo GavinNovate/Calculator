@@ -1,0 +1,16 @@
+PODS:
+  - sharedUiiOS (1.0)
+
+DEPENDENCIES:
+  - sharedUiiOS (from `../sharedUiiOS`)
+
+EXTERNAL SOURCES:
+  sharedUiiOS:
+    :path: "../sharedUiiOS"
+
+SPEC CHECKSUMS:
+  sharedUiiOS: 9d3f7059dd98eea637faee8a76e1d0e83a5fe238
+
+PODFILE CHECKSUM: d6262261e3af59b1131a23b307ad72b7d7f7d4cb
+
+COCOAPODS: 1.11.3
