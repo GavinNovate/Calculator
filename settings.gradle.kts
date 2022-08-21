@@ -10,3 +10,4 @@ rootProject.name = "Calculator"
 include(":androidApp")
 include(":sharedUiiOS")
 include(":sharedUi")
+include(":shared")
