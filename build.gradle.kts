@@ -3,10 +3,11 @@ buildscript {
         gradlePluginPortal()
         google()
         mavenCentral()
+        jetbrainsComposeDev()
     }
     dependencies {
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
-        classpath("com.android.tools.build:gradle:7.2.2")
+        classpath(deps.kotlinGradlePlugin)
+        classpath(deps.androidGradlePlugin)
     }
 }
 
@@ -14,6 +15,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        jetbrainsComposeDev()
     }
 }
 
