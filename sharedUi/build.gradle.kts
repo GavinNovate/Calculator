@@ -20,7 +20,7 @@ kotlin {
             baseName = "sharedUi"
         }
     }
-    
+
     sourceSets {
         val commonMain by getting {
             dependencies {

@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    jetbrainsCompose()
 }
 
 android {
@@ -20,7 +21,8 @@ android {
 }
 
 dependencies {
-    implementation(project(":sharedUiiOS"))
+    implementation(project(":sharedUi"))
+    implementation(deps.compose.android.extensions.activity)
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("androidx.constraintlayout:constraintlayout:2.1.0")

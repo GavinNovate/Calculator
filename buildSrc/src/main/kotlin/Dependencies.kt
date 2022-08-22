@@ -7,6 +7,9 @@ internal const val kotlinVersion = "1.7.0"
 // Compose
 internal const val jetbrainsComposeVersion = "1.2.0-alpha01-dev755"
 
+internal const val jetpackComposeVersion = "1.1.0"
+internal const val jetpackComposeActivityExtensionVersion = "1.5.1"
+
 // Android
 internal const val androidGradlePluginVersion = "7.2.2"
 
@@ -17,6 +20,24 @@ val Project.deps
     get() = ProjectDependencies
 
 object ProjectDependencies {
+    val compose get() = ComposeDependencies
+}
+
+object ComposeDependencies {
+    val android get() = AndroidComposeDependencies
+}
+
+object AndroidComposeDependencies {
+    const val ui = "androidx.compose.ui:ui:$jetpackComposeVersion"
+    const val foundation = "androidx.compose.foundation:foundation:$jetpackComposeVersion"
+    const val uiTooling = "androidx.compose.ui:ui-tooling:$jetpackComposeVersion"
+    const val uiToolingPreview = "androidx.compose.ui:ui-tooling-preview:$jetpackComposeVersion"
+
+    val extensions get() = AndroidComposeExtensionDependencies
+}
+
+object AndroidComposeExtensionDependencies {
+    const val activity = "androidx.activity:activity-compose:$jetpackComposeActivityExtensionVersion"
 }
 
 /**
