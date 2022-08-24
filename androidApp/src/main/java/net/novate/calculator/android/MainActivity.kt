@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+/**
+ * 设置 Window DecorView 是否适配 SystemWindows
+ *
+ * @throws NotImplementedError get() 方法暂未实现
+ */
 var Window.isDecorFitsSystemWindows: Boolean
     set(value) = WindowCompat.setDecorFitsSystemWindows(this, value)
     get() = TODO()

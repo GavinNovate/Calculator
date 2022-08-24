@@ -35,7 +35,14 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting
+        val androidMain by getting {
+            dependsOn(commonMain)
+            dependencies {
+                implementation(deps.compose.android.ui)
+                implementation(deps.compose.android.foundation)
+                implementation("androidx.appcompat:appcompat:1.3.1")
+            }
+        }
         val androidTest by getting
 
         val uikitMain by creating {

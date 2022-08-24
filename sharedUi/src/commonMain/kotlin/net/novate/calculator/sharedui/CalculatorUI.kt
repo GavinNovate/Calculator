@@ -22,50 +22,73 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import net.novate.calculator.sharedui.base.LocalNavigationBarInsets
+import net.novate.calculator.sharedui.base.LocalStatusBarInsets
+import net.novate.calculator.sharedui.base.WindowInsetsProvider
 
 @Composable
 fun CalculatorUI() {
-    Box(Modifier.fillMaxSize()) {
+    WindowInsetsProvider {
+        val statusInsets = LocalStatusBarInsets.current
+        val navigationInsets = LocalNavigationBarInsets.current
+        val left = with(LocalDensity.current) {
+            (statusInsets.left + navigationInsets.left).toDp()
+        }
+        val top = with(LocalDensity.current) {
+            (statusInsets.top + navigationInsets.top).toDp()
+        }
+        val right = with(LocalDensity.current) {
+            (statusInsets.right + navigationInsets.right).toDp()
+        }
+        val bottom = with(LocalDensity.current) {
+            (statusInsets.bottom + navigationInsets.bottom).toDp()
+        }
         Box(
-            Modifier.fillMaxWidth().wrapContentHeight().padding(16.dp).align(Alignment.BottomCenter)
+            Modifier.fillMaxSize().background(Color.Black)
+                .padding(start = left, top = top, end = right, bottom = bottom)
         ) {
-            Column {
-                Row {
-                    Operator("(")
-                    Operator(")")
-                    Operator("%")
-                    Operator("C")
-                }
-                Spacer(Modifier.height(4.dp))
-                Row {
-                    Number("7")
-                    Number("8")
-                    Number("9")
-                    Operator("÷")
-                }
-                Spacer(Modifier.height(4.dp))
-                Row {
-                    Number("4")
-                    Number("5")
-                    Number("6")
-                    Operator("×")
-                }
-                Spacer(Modifier.height(4.dp))
-                Row {
-                    Number("1")
-                    Number("2")
-                    Number("3")
-                    Operator("-")
-                }
-                Spacer(Modifier.height(4.dp))
-                Row {
-                    Number("0")
-                    Number(".")
-                    Calculator()
-                    Operator("+")
+            Box(
+                Modifier.fillMaxWidth().wrapContentHeight().padding(16.dp).align(Alignment.BottomCenter)
+            ) {
+                Column {
+                    Row {
+                        Operator("(")
+                        Operator(")")
+                        Operator("%")
+                        Operator("C")
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    Row {
+                        Number("7")
+                        Number("8")
+                        Number("9")
+                        Operator("÷")
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    Row {
+                        Number("4")
+                        Number("5")
+                        Number("6")
+                        Operator("×")
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    Row {
+                        Number("1")
+                        Number("2")
+                        Number("3")
+                        Operator("-")
+                    }
+                    Spacer(Modifier.height(4.dp))
+                    Row {
+                        Number("0")
+                        Number(".")
+                        Calculator()
+                        Operator("+")
+                    }
                 }
             }
         }
