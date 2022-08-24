@@ -2,15 +2,25 @@ import SwiftUI
 import sharedUiiOS
 
 struct ContentView: View {
-	let greet = Greeting().greeting()
-
-	var body: some View {
-		Text(greet)
-	}
+    
+    var body: some View {
+        CalculatorUIView()
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
-	static var previews: some View {
-		ContentView()
-	}
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+struct CalculatorUIView: UIViewControllerRepresentable{
+    
+    func makeUIViewController(context: Context) -> some UIViewController {
+        CalculatorUIKt.createCalculatorUI()
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
 }

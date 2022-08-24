@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CalculatorUi() {
+fun CalculatorUI() {
     Box(Modifier.fillMaxSize()) {
         Box(
             Modifier.fillMaxWidth().wrapContentHeight().padding(16.dp).align(Alignment.BottomCenter)
