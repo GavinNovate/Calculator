@@ -4,7 +4,7 @@ import sharedUiiOS
 struct ContentView: View {
     
     var body: some View {
-        CalculatorUIView()
+        CalculatorUIView().edgesIgnoringSafeArea(.all)
     }
 }
 
