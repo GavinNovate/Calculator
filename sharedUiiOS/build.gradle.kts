@@ -1,14 +1,12 @@
 plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
-    id("com.android.library")
     jetbrainsCompose()
 }
 
 version = "1.0"
 
 kotlin {
-    android()
     iosX64("uikitX64")
     iosArm64("uikitArm64")
 
@@ -37,27 +35,15 @@ kotlin {
                 implementation(kotlin("test"))
             }
         }
-        val androidMain by getting
-        val androidTest by getting
 
         val uikitMain by creating {
             dependsOn(commonMain)
         }
-
         val uikitX64Main by getting {
             dependsOn(uikitMain)
         }
         val uikitArm64Main by getting {
             dependsOn(uikitMain)
         }
-    }
-}
-
-android {
-    compileSdk = 32
-    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
-    defaultConfig {
-        minSdk = 26
-        targetSdk = 32
     }
 }
