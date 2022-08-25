@@ -38,6 +38,7 @@ kotlin {
         val androidMain by getting {
             dependsOn(commonMain)
             dependencies {
+                // TODO: Compose 依赖有问题导致 androidMain 中不能访问依赖的类库，但是可以编译通过
                 implementation(deps.compose.android.ui)
                 implementation(deps.compose.android.foundation)
                 implementation("androidx.appcompat:appcompat:1.3.1")

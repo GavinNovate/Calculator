@@ -5,7 +5,7 @@ import org.gradle.kotlin.dsl.ScriptHandlerScope
 internal const val kotlinVersion = "1.7.10"
 
 // Compose
-internal const val jetbrainsComposeVersion = "1.2.0-alpha01-dev764"
+internal const val jetbrainsComposeVersion = "1.2.0-alpha01-dev770"
 
 internal const val jetpackComposeVersion = "1.1.0"
 internal const val jetpackComposeActivityExtensionVersion = "1.5.1"
