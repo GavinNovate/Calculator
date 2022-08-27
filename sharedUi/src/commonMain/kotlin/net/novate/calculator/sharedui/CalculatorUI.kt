@@ -8,31 +8,41 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentHeight
-import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.Text
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import net.novate.calculator.sharedui.base.OrientationProvider
 import net.novate.calculator.sharedui.base.WindowInsetsProvider
 import net.novate.calculator.sharedui.base.windowInsetsPadding
+import net.novate.calculator.sharedui.ui.StandardCalculator
+import net.novate.calculator.sharedui.ui.theme.CalculatorTheme
 
 @Composable
 fun CalculatorUI() {
     WindowInsetsProvider {
-        Box(
-            Modifier.fillMaxSize().background(Color.Black)
+        OrientationProvider {
+            CalculatorTheme {
+                StandardCalculator()
+            }
+        }
+        /*Box(
+            Modifier.fillMaxSize().background(Color.White)
                 .windowInsetsPadding()
         ) {
             Box(
@@ -75,7 +85,7 @@ fun CalculatorUI() {
                     }
                 }
             }
-        }
+        }*/
     }
 }
 
@@ -105,9 +115,10 @@ fun RowScope.Button(text: String, span: Float = 1f, textColor: Color, background
     Box(
         modifier = Modifier
             .weight(span)
-            .height(80.dp)
-            .padding(horizontal = 2.dp)
-            .clip(RoundedCornerShape(4.dp))
+            .padding(all = 8.dp)
+            .aspectRatio(1.5f)
+            .shadow(elevation = 2.dp, shape = CircleShape)
+//            .clip(RoundedCornerShape(4.dp))
             .background(backgroundColor).clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = rememberRipple(color = Color.Black)
