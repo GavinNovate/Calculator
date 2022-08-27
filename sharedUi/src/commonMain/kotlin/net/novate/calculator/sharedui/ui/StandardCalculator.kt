@@ -20,17 +20,11 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import net.novate.calculator.sharedui.base.LocalOrientation
 import net.novate.calculator.sharedui.base.Orientation
-import net.novate.calculator.sharedui.ui.theme.lightBackgroundColor
-import net.novate.calculator.sharedui.ui.theme.lightButtonColor
-import net.novate.calculator.sharedui.ui.theme.lightPrimaryColor
-import net.novate.calculator.sharedui.ui.theme.lightPrimaryTextColor
-import net.novate.calculator.sharedui.ui.theme.lightSecondaryTextColor
-import net.novate.calculator.sharedui.ui.theme.lightSurfaceColor
-
+import net.novate.calculator.sharedui.ui.theme.Theme
 
 @Composable
 fun StandardCalculator() {
-    Box(modifier = Modifier.fillMaxSize().background(lightBackgroundColor)) {
+    Box(modifier = Modifier.fillMaxSize().background(Theme.colors.backgroundColor)) {
         Column(modifier = Modifier.fillMaxSize()) {
 
             Box(modifier = Modifier.fillMaxWidth().weight(0.3f).background(Color.Blue))
@@ -40,7 +34,7 @@ fun StandardCalculator() {
                     modifier = Modifier
                         .padding(horizontal = 8.dp)
                         .background(
-                            color = lightSurfaceColor,
+                            color = Theme.colors.surfaceColor,
                             shape = RoundedCornerShape(topStart = 16.dp, topEnd = 16.dp)
                         )
                         .padding(16.dp)
@@ -55,12 +49,12 @@ fun StandardCalculator() {
 
 @Composable
 fun FormulaText() {
-    Text("1+1", fontSize = 24.sp, color = lightPrimaryTextColor)
+    Text("1+1", fontSize = 24.sp, color = Theme.colors.textPrimaryColor)
 }
 
 @Composable
 fun ResultText() {
-    Text("3", fontSize = 28.sp, color = lightSecondaryTextColor)
+    Text("3", fontSize = 28.sp, color = Theme.colors.textSecondaryColor)
 }
 
 
@@ -91,41 +85,41 @@ fun RowScope.StandardKeypadRow1() {
     ) {
         Button(
             text = "MC",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "C",
-            textColor = lightPrimaryColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.primaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "7",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "4",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "1",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "0",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
     }
@@ -139,39 +133,39 @@ fun RowScope.StandardKeypadRow2() {
     ) {
         Button(
             text = "M+",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "÷",
             textSize = 26.sp,
-            textColor = lightPrimaryColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.primaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             onClick = {}
         )
         Button(
             text = "8",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "5",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "2",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = ".",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
     }
@@ -185,39 +179,39 @@ fun RowScope.StandardKeypadRow3() {
     ) {
         Button(
             text = "M-",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "×",
             textSize = 26.sp,
-            textColor = lightPrimaryColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.primaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             onClick = {}
         )
         Button(
             text = "9",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "6",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "4",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "%",
-            textColor = lightPrimaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textPrimaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
     }
@@ -231,35 +225,35 @@ fun RowScope.StandardKeypadRow4() {
     ) {
         Button(
             text = "MR",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "⌫",
-            textColor = lightPrimaryColor,
-            backgroundColor = lightButtonColor, textSize = 20.sp,
+            textColor = Theme.colors.primaryColor,
+            backgroundColor = Theme.colors.buttonColor, textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "-",
             textSize = 26.sp,
-            textColor = lightPrimaryColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.primaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             onClick = {}
         )
         Button(
             text = "+",
             textSize = 26.sp,
-            textColor = lightPrimaryColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.primaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             onClick = {}
         )
         Button(
             text = "=",
             textSize = 26.sp,
             textColor = Color.White,
-            backgroundColor = lightPrimaryColor,
+            backgroundColor = Theme.colors.primaryColor,
             span = 2f,
             coerceInWidth = false,
             onClick = {}

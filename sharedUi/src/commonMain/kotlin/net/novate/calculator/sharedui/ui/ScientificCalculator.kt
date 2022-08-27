@@ -8,8 +8,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.sp
-import net.novate.calculator.sharedui.ui.theme.lightButtonColor
-import net.novate.calculator.sharedui.ui.theme.lightSecondaryTextColor
+import net.novate.calculator.sharedui.ui.theme.Theme
 
 class ScientificCalculator {
 }
@@ -35,43 +34,43 @@ fun RowScope.ScientificRow1() {
     ) {
         Button(
             text = "(",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "1/x",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "x!",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "log₂",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "sin",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "sin⁻¹",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
@@ -86,43 +85,43 @@ fun RowScope.ScientificRow2() {
     ) {
         Button(
             text = ")",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "x²",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "√x",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "logₑ",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "cos",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "cos⁻¹",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
@@ -137,43 +136,43 @@ fun RowScope.ScientificRow3() {
     ) {
         Button(
             text = "e",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "x³",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "³√x",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "log₁₀",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "tan",
-            textColor = lightSecondaryTextColor,
+            textColor = Theme.colors.textSecondaryColor,
             textSize = 20.sp,
-            backgroundColor = lightButtonColor,
+            backgroundColor = Theme.colors.buttonColor,
             onClick = {}
         )
         Button(
             text = "tan⁻¹",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
@@ -188,43 +187,43 @@ fun RowScope.ScientificRow4() {
     ) {
         Button(
             text = "π",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "xʸ",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "ʸ√x",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "logₙ",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "cot",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
         Button(
             text = "cot⁻¹",
-            textColor = lightSecondaryTextColor,
-            backgroundColor = lightButtonColor,
+            textColor = Theme.colors.textSecondaryColor,
+            backgroundColor = Theme.colors.buttonColor,
             textSize = 20.sp,
             onClick = {}
         )
