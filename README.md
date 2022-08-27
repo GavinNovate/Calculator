@@ -5,15 +5,15 @@
 #### Android
 
 <center class="half">
-<img alt="浅色竖屏" src="./images/android1.png" height="240"/>
-<img alt="浅色横屏" src="./images/android2.png" height="240"/>
-<img alt="浅色小窗" src="./images/android3.png" height="240"/>
+<img alt="浅色竖屏" src="./images/android1.png" height="200"/>
+<img alt="浅色横屏" src="./images/android2.png" height="200"/>
+<img alt="浅色小窗" src="./images/android3.png" height="200"/>
 </center>
 
 <center class="half">
-<img alt="深色竖屏" src="./images/android4.png" height="240"/>
-<img alt="深色横屏" src="./images/android5.png" height="240"/>
-<img alt="深色小窗" src="./images/android6.png" height="240"/>
+<img alt="深色竖屏" src="./images/android4.png" height="200"/>
+<img alt="深色横屏" src="./images/android5.png" height="200"/>
+<img alt="深色小窗" src="./images/android6.png" height="200"/>
 </center>
 
 #### iOS
