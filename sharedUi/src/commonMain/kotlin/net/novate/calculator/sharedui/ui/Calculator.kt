@@ -14,11 +14,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import net.novate.calculator.sharedui.base.isLandscape
 import net.novate.calculator.sharedui.base.isPortrait
+import net.novate.calculator.sharedui.base.windowInsetsPadding
 import net.novate.calculator.sharedui.ui.theme.Theme
 
 @Composable
 fun Calculator() {
-    Column(modifier = Modifier.fillMaxSize().background(Theme.colors.backgroundColor)) {
+    Column(modifier = Modifier.fillMaxSize().background(Theme.colors.backgroundColor).windowInsetsPadding()) {
 
         Box(modifier = Modifier.fillMaxWidth().weight(0.3f)) {
             // TODO: Text

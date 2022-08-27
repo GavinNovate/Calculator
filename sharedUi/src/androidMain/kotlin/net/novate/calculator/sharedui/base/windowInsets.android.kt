@@ -16,15 +16,17 @@ import androidx.core.view.WindowInsetsCompat
 @Composable
 actual fun WindowInsetsProvider(content: @Composable () -> Unit) {
     val view = LocalView.current
-    var statusBarInsets by remember { mutableStateOf(Rect.Zero) }
-    var navigationBarInsets by remember { mutableStateOf(Rect.Zero) }
-    var windowInsets by remember { mutableStateOf(Rect.Zero) }
+    val rootWindowInsets = remember(view) { ViewCompat.getRootWindowInsets(view) }
+    var statusBarInsets by remember(view) {
+        mutableStateOf(rootWindowInsets?.statusBarsInsets?.toRect() ?: Rect.Zero)
+    }
+    var navigationBarInsets by remember(view) {
+        mutableStateOf(rootWindowInsets?.navigationBarsInsets?.toRect() ?: Rect.Zero)
+    }
+    var windowInsets by remember(view) {
+        mutableStateOf(rootWindowInsets?.windowInsets?.toRect() ?: Rect.Zero)
+    }
     LaunchedEffect(view) {
-        val rootWindowInsets = ViewCompat.getRootWindowInsets(view)
-        statusBarInsets = rootWindowInsets?.statusBarsInsets?.toRect() ?: Rect.Zero
-        navigationBarInsets = rootWindowInsets?.navigationBarsInsets?.toRect() ?: Rect.Zero
-        windowInsets = rootWindowInsets?.windowInsets?.toRect() ?: Rect.Zero
-
         ViewCompat.setOnApplyWindowInsetsListener(view) { _, insets ->
             statusBarInsets = insets.statusBarsInsets.toRect()
             navigationBarInsets = insets.navigationBarsInsets.toRect()
