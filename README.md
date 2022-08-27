@@ -4,17 +4,19 @@
 
 #### Android
 
-<img alt="浅色竖屏" height="240" src="./images/android1.png" width="118"/>
-<img alt="浅色横屏" height="240" src="./images/android2.png" width="490"/>
-<img alt="浅色小窗" height="240" src="./images/android3.png" width="118"/>
+<center class="half">
+<img alt="浅色竖屏" src="./images/android1.png"/><img alt="浅色横屏" src="./images/android2.png"/><img alt="浅色小窗" src="./images/android3.png"/>
+</center>
 
-<img alt="深色竖屏" height="240" src="./images/android4.png" width="118"/>
-<img alt="深色横屏" height="240" src="./images/android5.png" width="490"/>
-<img alt="深色小窗" height="240" src="./images/android6.png" width="118"/>
+<center class="half">
+<img alt="深色竖屏" src="./images/android4.png"/><img alt="深色横屏" src="./images/android5.png"/><img alt="深色小窗" src="./images/android6.png"/>
+</center>
 
 #### iOS
 
-<img alt="iOS浅色竖屏" height="240" src="./images/ios.png" width="111"/>
+<center class="half">
+<img alt="iOS浅色竖屏" src="./images/ios.png"/>
+</center>
 
 ### 设计思路
 
