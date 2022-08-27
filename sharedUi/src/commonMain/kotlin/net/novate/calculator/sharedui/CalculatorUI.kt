@@ -22,34 +22,18 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import net.novate.calculator.sharedui.base.LocalNavigationBarInsets
-import net.novate.calculator.sharedui.base.LocalStatusBarInsets
 import net.novate.calculator.sharedui.base.WindowInsetsProvider
+import net.novate.calculator.sharedui.base.windowInsetsPadding
 
 @Composable
 fun CalculatorUI() {
     WindowInsetsProvider {
-        val statusInsets = LocalStatusBarInsets.current
-        val navigationInsets = LocalNavigationBarInsets.current
-        val left = with(LocalDensity.current) {
-            (statusInsets.left + navigationInsets.left).toDp()
-        }
-        val top = with(LocalDensity.current) {
-            (statusInsets.top + navigationInsets.top).toDp()
-        }
-        val right = with(LocalDensity.current) {
-            (statusInsets.right + navigationInsets.right).toDp()
-        }
-        val bottom = with(LocalDensity.current) {
-            (statusInsets.bottom + navigationInsets.bottom).toDp()
-        }
         Box(
             Modifier.fillMaxSize().background(Color.Black)
-                .padding(start = left, top = top, end = right, bottom = bottom)
+                .windowInsetsPadding()
         ) {
             Box(
                 Modifier.fillMaxWidth().wrapContentHeight().padding(16.dp).align(Alignment.BottomCenter)
@@ -59,7 +43,7 @@ fun CalculatorUI() {
                         Operator("(")
                         Operator(")")
                         Operator("%")
-                        Operator("C")
+                        Operator("⌫")
                     }
                     Spacer(Modifier.height(4.dp))
                     Row {

@@ -18,13 +18,17 @@ actual fun WindowInsetsProvider(content: @Composable () -> Unit) {
     val view = LocalView.current
     var statusBarInsets by remember { mutableStateOf(Rect.Zero) }
     var navigationBarInsets by remember { mutableStateOf(Rect.Zero) }
+    var windowInsets by remember { mutableStateOf(Rect.Zero) }
     LaunchedEffect(view) {
-        val insets0 = ViewCompat.getRootWindowInsets(view)
-        statusBarInsets = insets0?.getInsets(WindowInsetsCompat.Type.statusBars())?.toRect() ?: Rect.Zero
-        navigationBarInsets = insets0?.getInsets(WindowInsetsCompat.Type.navigationBars())?.toRect() ?: Rect.Zero
+        val rootWindowInsets = ViewCompat.getRootWindowInsets(view)
+        statusBarInsets = rootWindowInsets?.statusBarsInsets?.toRect() ?: Rect.Zero
+        navigationBarInsets = rootWindowInsets?.navigationBarsInsets?.toRect() ?: Rect.Zero
+        windowInsets = rootWindowInsets?.windowInsets?.toRect() ?: Rect.Zero
+
         ViewCompat.setOnApplyWindowInsetsListener(view) { _, insets ->
-            statusBarInsets = insets.getInsets(WindowInsetsCompat.Type.statusBars()).toRect()
-            navigationBarInsets = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).toRect()
+            statusBarInsets = insets.statusBarsInsets.toRect()
+            navigationBarInsets = insets.navigationBarsInsets.toRect()
+            windowInsets = insets.windowInsets.toRect()
             WindowInsetsCompat.CONSUMED
         }
     }
@@ -32,8 +36,18 @@ actual fun WindowInsetsProvider(content: @Composable () -> Unit) {
     CompositionLocalProvider(
         LocalStatusBarInsets provides statusBarInsets,
         LocalNavigationBarInsets provides navigationBarInsets,
+        LocalWindowInsets provides windowInsets,
         content = content
     )
 }
+
+private val WindowInsetsCompat.statusBarsInsets: Insets
+    get() = getInsets(WindowInsetsCompat.Type.statusBars())
+
+private val WindowInsetsCompat.navigationBarsInsets: Insets
+    get() = getInsets(WindowInsetsCompat.Type.navigationBars())
+
+private val WindowInsetsCompat.windowInsets: Insets
+    get() = getInsets(WindowInsetsCompat.Type.statusBars() or WindowInsetsCompat.Type.navigationBars())
 
 private fun Insets.toRect() = Rect(left.toFloat(), top.toFloat(), right.toFloat(), bottom.toFloat())
