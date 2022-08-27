@@ -4,13 +4,13 @@
 
 #### Android
 
-<center class="half">
+<center class="third">
 <img alt="浅色竖屏" src="./images/android1.png" height="200"/>
 <img alt="浅色横屏" src="./images/android2.png" height="200"/>
 <img alt="浅色小窗" src="./images/android3.png" height="200"/>
 </center>
 
-<center class="half">
+<center class="third">
 <img alt="深色竖屏" src="./images/android4.png" height="200"/>
 <img alt="深色横屏" src="./images/android5.png" height="200"/>
 <img alt="深色小窗" src="./images/android6.png" height="200"/>
@@ -18,7 +18,7 @@
 
 #### iOS
 
-<center class="half">
+<center>
 <img alt="iOS浅色竖屏" src="./images/ios.png" height="240"/>
 </center>
 
