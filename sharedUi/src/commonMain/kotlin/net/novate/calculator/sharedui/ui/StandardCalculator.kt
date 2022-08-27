@@ -27,9 +27,9 @@ fun StandardCalculator() {
     Box(modifier = Modifier.fillMaxSize().background(Theme.colors.backgroundColor)) {
         Column(modifier = Modifier.fillMaxSize()) {
 
-            Box(modifier = Modifier.fillMaxWidth().weight(0.3f).background(Color.Blue))
+            Box(modifier = Modifier.fillMaxWidth().weight(0.3f))
 
-            Box(modifier = Modifier.weight(0.7f).background(Color.Yellow)) {
+            Box(modifier = Modifier.weight(0.7f)) {
                 Surface(
                     modifier = Modifier
                         .padding(horizontal = 8.dp)
@@ -61,7 +61,7 @@ fun ResultText() {
 @Composable
 fun StandardKeypad() {
     Row(
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize().background(Theme.colors.surfaceColor)
     ) {
         if (LocalOrientation.current == Orientation.LANDSCAPE) {
             ScientificRow1()

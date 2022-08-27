@@ -20,6 +20,7 @@ import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import net.novate.calculator.sharedui.base.modifiers.coerceInWidth
+import net.novate.calculator.sharedui.ui.theme.Theme
 
 @Composable
 fun ColumnScope.Button(
@@ -52,7 +53,7 @@ fun ColumnScope.Button(
             .background(backgroundColor)
             .clickable(
                 interactionSource = remember { MutableInteractionSource() },
-                indication = rememberRipple(color = Color.Black),
+                indication = rememberRipple(color = Theme.colors.onButtonColor),
                 onClick = onClick
             )
 

@@ -32,6 +32,11 @@ interface CalculatorColors {
     val onPrimaryColor: Color
 
     /**
+     * 按钮色上的内容的颜色
+     */
+    val onButtonColor: Color
+
+    /**
      * 文字主色
      */
     val textPrimaryColor: Color
@@ -54,6 +59,8 @@ object DarkCalculatorColors : CalculatorColors {
 
     override val onPrimaryColor: Color = Color(0xFFDCE2E2)
 
+    override val onButtonColor: Color = Color.White
+
     override val textPrimaryColor: Color = Color(0xFFDCE2E2)
 
     override val textSecondaryColor: Color = Color(0xFFA6A7AB)
@@ -71,6 +78,8 @@ object LightCalculatorColors : CalculatorColors {
     override val backgroundColor: Color = Color(0xFFE8ECF2)
 
     override val onPrimaryColor: Color = Color(0xFFFDFFFF)
+
+    override val onButtonColor: Color = Color.Black
 
     override val textPrimaryColor: Color = Color(0xFF181818)
 
